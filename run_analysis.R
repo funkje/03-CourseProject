@@ -53,9 +53,9 @@ renameActivities <- function(x){
 # get the desired feature list
 features <- getFeatures(c("mean()", "std()"))
 
-# # get the test data, train data and merge them together
-# testData <- getData("test", features)
-# trainData <- getData("train", features)
+# get the test data, train data and merge them together
+testData <- getData("test", features)
+trainData <- getData("train", features)
 dataset <- rbindlist(list(testData, trainData))
 
 # give activities the descriptive name
